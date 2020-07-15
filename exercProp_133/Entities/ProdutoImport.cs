@@ -20,8 +20,8 @@ namespace exercProp_133.Entities
         public override string PrecoEtiqueta()
         {
             return Nome 
-                + TotalPrice() 
-                + $" (Taxa de Alfandega: R${TaxaAlfandega.ToString("F2", CultureInfo.InvariantCulture)}";
+                + TotalPrice().ToString("F2", CultureInfo.InvariantCulture) 
+                + $" (Taxa de Alfandega: R$ ${TaxaAlfandega.ToString("F2", CultureInfo.InvariantCulture)})";
         }
 
         public double TotalPrice()

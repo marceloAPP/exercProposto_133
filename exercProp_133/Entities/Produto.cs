@@ -8,8 +8,7 @@ namespace exercProp_133.Entities
     {
         public string Nome { get; set; }
         public double Preco { get; set; }
-        public int _produto;
-
+        
         public Produto()
         {
         }
@@ -22,7 +21,9 @@ namespace exercProp_133.Entities
 
         public virtual string PrecoEtiqueta()
         {
-            return Nome + " R$ " + Preco.ToString("F2", CultureInfo.InvariantCulture);                    
+            return Nome 
+                + " R$ " 
+                + Preco.ToString("F2", CultureInfo.InvariantCulture);                    
         }
     }
 }

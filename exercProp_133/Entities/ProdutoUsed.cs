@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 
 namespace exercProp_133.Entities
 {
@@ -19,9 +19,10 @@ namespace exercProp_133.Entities
 
         public override string PrecoEtiqueta()
         {
-            return Nome 
-                + " (Usado) R$" 
-                + Preco + $"(Data de Fabricação: {DataFabricacao.ToShortDateString()})";  
+            return Nome
+                + " (Usado) R$"
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
+                + $"(Data de Fabricação: {DataFabricacao.ToString("dd/MM/yyyy")})";  
         }
     }
 }
