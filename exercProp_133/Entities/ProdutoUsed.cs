@@ -17,5 +17,9 @@ namespace exercProp_133.Entities
             DataFabricacao = DataFabricacao;
         }
 
+        public string PrecoEtiquetaUsed()
+        {
+            return Nome + " (Usado) R$" + Preco + $"(Data de Fabricação: {DataFabricacao.ToShortDateString()})";  
+        }
     }
 }

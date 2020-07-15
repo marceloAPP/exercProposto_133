@@ -16,7 +16,7 @@ namespace exercProp_133
 
             for (int i = 1; i <= num; i++)
             {
-                Console.WriteLine($"\nDados do Produto {num}: ");
+                Console.WriteLine($"\nDados do Produto {i}: ");
                 Console.Write("Produto Comum/Usado/Importado? (C/U/I): ");
                 char ch = char.Parse(Console.ReadLine());
 
@@ -29,10 +29,29 @@ namespace exercProp_133
                 if (ch == 'U')
                 {
                     Console.Write("Data de Fabricação (DD/MM/AAAA): ");
-                    DateTime dataFabricacao = DateTime.Parse(Console.ReadLine()); 
+                    DateTime dataFabricacao = DateTime.Parse(Console.ReadLine());
+
+                    prod.Add(new ProdutoUsed(nome, preco, dataFabricacao));
+                }
+                else if (ch == 'I')
+                {
+                    Console.Write("Taxa de Alfandega: ");
+                    double taxaAlfandega = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                    prod.Add(new ProdutoImport(nome, preco, taxaAlfandega));
+                }
+                else
+                {
+                    prod.Add(new Produto(nome, preco));
                 }
             }
-            
+
+            Console.WriteLine("\nPREÇOS ETIQUETAS: ");
+            foreach (var item in prod)
+            {
+                Console.WriteLine(item.PrecoEtiqueta());
+            }
+
         }
     }
 }

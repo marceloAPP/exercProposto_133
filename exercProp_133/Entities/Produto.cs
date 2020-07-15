@@ -20,7 +20,7 @@ namespace exercProp_133.Entities
             Preco = preco;
         }
 
-        public virtual string PrecoEtiqueta()
+        public string PrecoEtiqueta()
         {
             return Nome + " R$ " + Preco.ToString("F2", CultureInfo.InvariantCulture);                    
         }
