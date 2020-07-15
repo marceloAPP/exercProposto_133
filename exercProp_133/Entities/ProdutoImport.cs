@@ -17,10 +17,11 @@ namespace exercProp_133.Entities
             TaxaAlfandega = taxaAlfandega;
         }
 
-        public string PrecoEtiquetaImp()
+        public override string PrecoEtiqueta()
         {
-            
-            return Nome + TotalPrice() + $" (Taxa de Alfandega: R${TaxaAlfandega.ToString("F2", CultureInfo.InvariantCulture)}";
+            return Nome 
+                + TotalPrice() 
+                + $" (Taxa de Alfandega: R${TaxaAlfandega.ToString("F2", CultureInfo.InvariantCulture)}";
         }
 
         public double TotalPrice()

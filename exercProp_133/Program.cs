@@ -51,7 +51,6 @@ namespace exercProp_133
             {
                 Console.WriteLine(item.PrecoEtiqueta());
             }
-
         }
     }
 }
