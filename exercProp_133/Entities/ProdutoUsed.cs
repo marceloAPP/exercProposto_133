@@ -12,9 +12,9 @@ namespace exercProp_133.Entities
         {
         }
 
-        public ProdutoUsed(string nome, double preco, DateTime dataFrabicacao) : base(nome, preco)
+        public ProdutoUsed(string nome, double preco, DateTime dataFabricacao) : base(nome, preco)
         {
-            DataFabricacao = DataFabricacao;
+            DataFabricacao = dataFabricacao;
         }
 
         public override string PrecoEtiqueta()
