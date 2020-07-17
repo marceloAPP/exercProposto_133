@@ -22,7 +22,9 @@ namespace exercProp_133.Entities
             return Nome
                 + " (Usado) R$"
                 + Preco.ToString("F2", CultureInfo.InvariantCulture)
-                + $"(Data de Fabricação: {DataFabricacao.ToString("dd/MM/yyyy")})";  
+                + " (Data de Fabricação: " 
+                + DataFabricacao.ToString("dd/MM/yyyy")
+                + ")";  
         }
     }
 }
